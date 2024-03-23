@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Handmade Categories</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0IBwcHBw0IBwcHBw0HBwcHCA8IDQcNFREWFhURExMYHSggGCYlGxUfITEhJSkrLi4uFx8zODMsNygtLisBCgoKDQ0NDg0NDysZFRkrKzcrLS03LS0tLSsrKzcrKystLSsrKysrKysrKysrKy0rLSsrKysrKysrKysrKysrK//AABEIALcBEwMBIgACEQEDEQH/xAAaAAEBAQEBAQEAAAAAAAAAAAABAAIDBQQG/8QAFhABAQEAAAAAAAAAAAAAAAAAABEB/8QAGgEBAQEBAQEBAAAAAAAAAAAAAQACBAUDBv/EABcRAQEBAQAAAAAAAAAAAAAAAAARARL/2gAMAwEAAhEDEQA/AP2GYY1DH6Cvx/TMUaigqrKjUUQrMRiJrKaCVCKiNAjQRoRRVCIRoRSVCKRoRSNSSSqSSVSSRqUKSrMUaCNZiKJ6do1DDHyrkZgjcEVTMUagKrKKSrKKKrKaCVAaCNAaRNZRSVCKRoRSNCKRoRSVCKRoRSVQKSoRSNZRRNfVDGoo+FfCMRRqKGpiCNRQ1liBuCEMhpJMwNAoBoJUIgmhFJUJJGhFI0IpKhFFqhFJUFIGpJI1ApKskop90EbijnqjEEbghrO4xBG4Nw1mOcEbghrO4zBGtwQ0MhuCEMhqBBkNRFMopIJIlJJGhFI1JJGpRJGoFJUFJFJFGslJKvSgjcEctfaMQbje4Nw1ncYgje4I1WNxiDcbghrO45wR0ghrMc4o3GdwsxmCNxncNEZgbgNDCaiSZDUEKCMSQSKIUKRCKRCKRCKSCMSIRiRepBG4o5K7I5wRvcG4WNxiCNwQ1jcY3BG4Nw1ncYgjcG4WNxiMx0jO41WdxiCNwQsxiKNQQsxmBvcZhAgjUCTKKhASSKSSKSSKSSKSKIRSIRST1oI3BHHXo7jMZje4IazuMQbjcG4axuMCNwbjTG4xBGoNwsbjG4I3BDWNxiCNwQs7jEDcELMYijUBZjIjShEYgbgiEZDUUKZTQRCKRCKRBRRCKRCRSexBG4I4nqxiDcbg3DWdxiCNwbhY3GNwRsbjTG457gjcENY3GII3BuGsbjEG43BDWdxiCNwbhrG4xBG4IazGII3BDRGYI3BDRGIo1BEIzE1BCozFGkjGUSiEUiEQkEUU9uCNJwPZjEG43BuGs7jEZ3HSMxpjcYgb3BuGsbjA3G4CxuMbgbghY3GII3AWdxjcEbghrG4xBG4IazuMQRuCGsxiKNQQiMwRuCIRmCNRQ1RkRqKFRlNKJMpqJFlGLUmCQU9yKNROB7cZgaUQ3HPcG43BuNMbjEG43uMwsbjO4y3uDcLG4xob3BCxuMQRsQs7jAjcBY3GIo0IWYzA1uCGsxmCNwQ1mMCNwQiMwRqIiMxQxRKMxNKIxlRpRKMwa0NK1hNAsveUKee90RmOkG4qo5wbjpuM7jVZ3HPcEdNxncNY3GIGtwNMbjO4I1ohY3GII2NwsbjA3GwWdxiJoQsbjIjUUIjETQiZjMEaghEZijUEIjMTUSEZgjURMZTUCTOs63rOlnWUk0w93NaoTz3uZpqoSNQ1JLWRqTTGs6AixoBTTGshIsDQkWNASLOhJFkBIs6AkgkEQkklRUkRRRupEbrO6zupHHz3WKkmnzr/2Q==);
+      background-position: center;
+      background-size: cover;
+    }
+
+    header {
+      padding: 10px;
+      text-align: center;
+    }
+
+    h1{
+        color:#fff;
+        position: relative;
+        bottom: 8%;
+        flex-basis: 50%;
+        font-size: 80px;
+        line-height: 90px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+        color: transparent;
+        -webkit-text-stroke: 1.5px #fff;
+        background: url(back.png);
+        -webkit-background-clip: text;
+        background-position: 0 0;
+        animation: back 20s linear infinite;
+    }
+
+
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .category {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin: 10px;
+      overflow: hidden;
+      width: 300px;
+      transition: transform 0.2s ease-in-out;
+    }
+    
+
+    .category img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .category-content {
+      padding: 20px;
+    }
+
+    h2 {
+      margin-top:0px;
+    }
+
+    /* Hover effect */
+    .category:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 >Product Categories</h1>
+  </header>
+
+  <main>
+    <div class="category">
+      <img src="jewellery1.jpg" alt="Discovery">
+      <div class="category-content">
+        <h2>Jewelry</h2>
+        <p>Discover Your Sparkle & Adorn Yourself with Elegance</p>
+      </div>
+    </div>
+
+    <div class="category">
+      <img src="Furniture.jpeg" alt="Podcast">
+      <div class="category-content">
+        <h2>Furniture</h2>
+        <p>Timeless Furniture for Modern Living</p>
+      </div>
+    </div>
+
+    <div class="category">
+      <img src="Tools & Lighting.jpg" alt="Pop">
+      <div class="category-content">
+        <h2>Tools & Lighting</h2>
+        <p>Tools and Lighting Solutions for Every Project</p>
+      </div>
+    </div>
+
+    <div class="category">
+      <img src="Home Decor.jpeg" alt="Indie">
+      <div class="category-content">
+        <h2>Home Decor</h2>
+        <p>Home is the starting place of love, hope, and dreams.</p>
+      </div>
+    </div>
+
+    <div class="category">
+      <img src="Clothing.jpeg" alt="Trending">
+      <div class="category-content">
+        <h2>Clothing</h2>
+        <p>Unleash Your Fashion Identity with Trendsetting Apparel</p>
+      </div>
+    </div>
+
+    <div class="category">
+      <img src="Beauty Products.jpg" alt="Decades">
+      <div class="category-content">
+        <h2>Beauty Products</h2>
+        <p>Unveil Your Natural Beauty with Our Exclusive Collection.</p>
+      </div>
+    </div>
+
+    <div class="category">
+      <img src="Handcrafted Leather.jpeg" alt="Devotional">
+      <div class="category-content">
+        <h2>Handcrafted Leather</h2>
+        <p>Embrace the artistry of handcrafted leather & tales of tradition.</p>
+      </div>
+    </div>
+
+    <div class="category">
+      <img src="Hand-Dyed Fabrics.jpg" alt="Focus">
+      <div class="category-content">
+        <h2>Hand-Dyed Fabrics</h2>
+        <p>Hand-Dyed Fabrics Infused with Artistic Flair.</p>
+      </div>
+    </div>
+
+    <div class="category">
+      <img src="Artisanal Candles.jpeg" alt="Focus">
+      <div class="category-content">
+        <h2> Artisanal Candles </h2>
+        <p>Our Handcrafted Candles Illuminate Your Every Moment.</p>
+      </div>
+    </div>
+
+    <div class="category" >
+      <img src="Toys.jpg" alt="Focus">
+      <div class="category-content">
+        <h2> Toys </h2>
+        <p>Chill beats, lofi vibes, new track every week</p>
+      </div>
+    </div>
+
+    <div class="category">
+      <img src="Cosmetics.jpeg" alt="Focus">
+      <div class="category-content">
+        <h2>Cosmetics</h2>
+        <p>Unveil Your Natural Beauty with Our Artisanal Cosmetics</p>
+      </div>
+    </div>
+
+    <div class="category">
+      <img src="Handwoven Textiles.avif" alt="Focus">
+      <div class="category-content">
+        <h2>Handwoven Textiles</h2>
+        <p>Our Handwoven Textiles, Crafted with Care and Tradition.</p>
+      </div>
+    </div>
+  </main>
+
+</body>
+</html>
